@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Contentful
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="get()">
+        <ion-icon slot="icon-only" name="refresh-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>SimCards</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list lines="full">
+        <ion-item *ngFor="let simCard of simCards">
+          <ion-label class="ion-text-wrap">
+            <h1>Operador: {{ simCard.fields.operador }}</h1>
+            <h2>Tipo: {{ simCard.fields.tipo }}</h2>
+            <h3>UICC: {{ simCard.fields.uicc }}</h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

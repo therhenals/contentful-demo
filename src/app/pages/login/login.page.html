@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button (click)="login()">Login</ion-button>
+  <ion-button (click)="logout()">Logout</ion-button>
+
+  <div *ngIf="user$ | async as user" class="profile-container">
+    <ion-avatar class="avatar">
+      <img [src]="user.picture" [alt]="user.name" />
+    </ion-avatar>
+    <h2>{{ user.name }}</h2>
+    <p>{{ user.email }}</p>
+  </div>
+</ion-content>

@@ -1,0 +1,6 @@
+{
+	"appId": "com.therhenals.contentful",
+	"appName": "contentful-demo",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
